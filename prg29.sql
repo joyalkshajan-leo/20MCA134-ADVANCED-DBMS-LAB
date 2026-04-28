@@ -1,0 +1,53 @@
+SET SERVEROUTPUT ON;
+SET VERIFY OFF;
+
+BEGIN
+    EXECUTE IMMEDIATE 'DROP TABLE PROFESSOR';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
+
+CREATE TABLE PROFESSOR (
+    prof_id NUMBER,
+    prof_name VARCHAR2(50),
+    dept VARCHAR2(50)
+);
+
+INSERT INTO PROFESSOR VALUES (1, 'Smith', 'CS');
+INSERT INTO PROFESSOR VALUES (2, 'John', 'Math');
+
+COMMIT;
+
+CREATE OR REPLACE TRIGGER restrict_delete_professor
+BEFORE DELETE ON PROFESSOR
+BEGIN
+    RAISE_APPLICATION_ERROR(-20001, 'Deletion is not allowed on PROFESSOR table');
+END;
+/
+
+CREATE TABLE STD (
+    roll_no NUMBER,
+    name VARCHAR2(50)
+);
+
+SET SERVEROUTPUT ON;
+SET VERIFY OFF;
+
+CREATE OR REPLACE PROCEDURE insert_student(rno IN NUMBER, sname IN VARCHAR2)
+IS
+BEGIN
+    INSERT INTO STD (roll_no, name) VALUES (rno, sname);
+    DBMS_OUTPUT.PUT_LINE('Record inserted successfully');
+END;
+/
+
+DECLARE
+    r NUMBER := &roll_no;
+    n VARCHAR2(50) := '&name';
+BEGIN
+    insert_student(r, n);
+END;
+/
+
+DELETE FROM PROFESSOR WHERE prof_id = 1;
