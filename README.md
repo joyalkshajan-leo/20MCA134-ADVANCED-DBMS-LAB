@@ -1,15 +1,18 @@
-#20MCA134 ADVANCED DBMS LAB
-
-#PL/SQL
-16. Write a pl/sql function to Check whether number is prime or not.
-17. Write a pl/sql function to Find the Factorial of a number.
-18. Write a pl/sql Function to get the sum of 2 numbers
-20. Write a pl/sql function to print Weekday in letters.
-22. Write a pl/sql function to check whether the given string is a palindrome or not.
-23. Write a pl/sql function that computes and returns the maximum of two values.
-24. Write a pl/sql procedure to find the sum of two numbers
-25. Write a pl/sql procedure to insert the roll no. and name of a student into the STUDENT table.
-26. Write a pl/sql procedure to get the count of instructors in the given department
-27. Create a cursor to Display sid and rating of all sailors
-28. Create a cursor to display the details of employees.
-29. Write a trigger to restrict deletion operation on Professor table.
+📘 Advanced DBMS Lab – PL/SQL
+📋 List of Programs
+🔹 PL/SQL Functions
+Write a PL/SQL function to check whether a number is prime or not.
+Write a PL/SQL function to find the factorial of a number.
+Write a PL/SQL function to get the sum of 2 numbers.
+Write a PL/SQL function to print weekday in letters.
+Write a PL/SQL function to check whether the given string is a palindrome or not.
+Write a PL/SQL function that computes and returns the maximum of two values.
+🔹 PL/SQL Procedures
+Write a PL/SQL procedure to find the sum of two numbers.
+Write a PL/SQL procedure to insert the roll no. and name of a student into the STUDENT table.
+Write a PL/SQL procedure to get the count of instructors in the given department.
+🔹 Cursors
+Create a cursor to display sid and rating of all sailors.
+Create a cursor to display the details of employees.
+🔹 Trigger
+Write a trigger to restrict deletion operation on Professor table.
