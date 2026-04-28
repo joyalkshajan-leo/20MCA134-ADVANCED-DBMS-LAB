@@ -1,6 +1,6 @@
-20MCA134 ADVANCED DBMS LAB
+#20MCA134 ADVANCED DBMS LAB
 
-PL/SQL
+#PL/SQL
 16. Write a pl/sql function to Check whether number is prime or not.
 17. Write a pl/sql function to Find the Factorial of a number.
 18. Write a pl/sql Function to get the sum of 2 numbers
